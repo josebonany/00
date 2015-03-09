@@ -4,7 +4,7 @@
 					e.preventDefault();
 					navigator.app.exitApp();
 				}
-				else if ($.mobile.activePage.attr('id') == 'calculadora' || 'naranjas' || 'albir'){
+				else if ($.mobile.activePage.attr('id') == 'calculadora' || 'naranjas' || 'albir' || 'alborea' || 'ellendale' || 'fortune'){
 					$.mobile.changePage('#home');
 			   }
 				else {
