@@ -162,10 +162,10 @@
                 
                 <h2>Mandarina</h2>
                 <ul id="mandarina" data-inset="true" data-role="listview">
-                   <li><a href="albir.html" data-ajax="false">Albir</a></li>
-                   <li><a href="alborea.html" data-ajax="false" data-rel="external">Alborea</a></li>
-                   <li><a href="ellendale.html" data-ajax="false" data-rel="external" data-rel="dialog">Ellendale</a></li>
-                   <li><a href="fortune.html" data-rel="external">Fortune</a></li>
+                   <li><a href="#albir">Albir</a></li>
+                   <li><a href="#alborea" data-ajax="false">Alborea</a></li>
+                   <li><a href="#ellendale" data-rel="dialog">Ellendale</a></li>
+                   <li><a href="#fortune" data-rel="external">Fortune</a></li>
                    <li><a href="garbi.html">Garbi</a></li>
                    <li><a href="goldnugget.html">Gold Nugget</a></li>
                    <li><a href="kara.html">Kara</a></li>
@@ -212,6 +212,310 @@
                 
           	</div>
        </div>
+
+  		<div data-role="page" id="albir" data-theme="b" data-fullscreen="false">
+    		<div data-role="content">
+    			<div align="center">
+    				<ul data-inset="true" data-role="listview" data-theme="m" data-dividertheme="m">
+                    	<li data-role="list-divider">Albir<span class="ui-li-count">Mandarina</span></li>
+                    </ul>
+    				<img src="img/albir.jpg" style="max-width:100%; border-bottom-left-radius:12px; border-bottom-right-radius:12px;border-top-left-radius:12px; border-top-right-radius:12px;"/>
+    			</div>
+                <div>
+                    <p>
+                    	Híbrido triploide obtenido por polinización controlada en 1996 entre el mandarino Fortune y el mandarino Kara. Árbol vigoroso, de crecimiento abierto y aspecto llorón. <br><br>Presenta espinas en el 27% de los nudos de las últimas brotaciones, con una longitud media de 4 mm. <br><br>Todos los ensayos realizados tanto en parcelas con un elevado nivel de inóculo, como en inoculaciones de hojas in vitro y plantas in vivo indican que son resistentes a Alternaria.
+                        <br>
+                        <br>
+                    	Ligera tendencia a la vecería. Facilidad de pelado (media).
+                    </p>
+                </div>
+                <div style="background-color:#EDE8DF; border-top-left-radius:12px; border-top-right-radius:12px;">
+                    <ul data-inset="true" data-role="listview">
+                        <li data-role="list-divider">Fecha de recogida</li>
+                    </ul>
+                        
+                    <div id="dateRulersExample1">
+                        <script>
+                            var months = ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"];
+                            $("#dateRulersExample1").dateRangeSlider({
+                                enabled: false,
+                                arrows:false,
+                                bounds: {min: new Date(2015, 11, 1), max: new Date(2016, 2, 31)},
+                                defaultValues: {min: new Date(2016, 0, 10), max: new Date(2016, 1, 27)},
+                                scales: [{
+                                    first: function(value){ return value; },
+                                    end: function(value) {return value; },
+                                    next: function(value){
+                                        var next = new Date(value);
+                                        return new Date(next.setMonth(value.getMonth() + 1));
+                                    },
+                                    label: function(value){
+                                        return months[value.getMonth()];
+                                    },
+                                    format: function(tickContainer, tickStart, tickEnd){
+                                        tickContainer.addClass("myCustomClass");
+                                    }
+                                }]
+                            });
+                        </script>
+                    </div>
+                </div>
+                <ul data-inset="true" data-role="listview">
+                	<li data-role="list-divider">Caracteristicas del fruto</li>
+                    <li>
+                    	<h2>Peso</h2>
+                        <p class="ui-li-aside" style="padding-top:6px">120gr. / 130gr.</p>
+                    </li>
+                    <li>
+                    	<h2>Diametro</h2>
+                        <p class="ui-li-aside" style="padding-top:6px">60mm. / 70mm.</p>
+                    </li>
+                    <li>
+                    	<h2>Corteza</h2>
+                        <p class="ui-li-aside" style="padding-top:6px">2,2mm. / 3,0mm.</p>
+                    </li>
+                    <li>
+                    	<h2>Zumo</h2>
+                        <p class="ui-li-aside" style="padding-top:6px">48% / 52%</p>
+                    </li>
+                    <li>
+                    	<h2>Semillas</h2>
+                        <p class="ui-li-aside" style="padding-top:6px">No</p>
+                    </li>
+                </ul>
+                <div align="center">
+                	<img src="img/albirChart.png" style="max-width:100%; border-bottom-left-radius:12px; border-bottom-right-radius:12px;border-top-left-radius:12px; border-top-right-radius:12px;"/>
+                </div>
+    		</div>
+    	</div>
+
+  		<div data-role="page" id="alborea" data-theme="b" data-fullscreen="false">
+    		<div data-role="content">
+    			<div align="center">
+    				<ul data-inset="true" data-role="listview" data-theme="m" data-dividertheme="m">
+                    	<li data-role="list-divider">Alborea<span class="ui-li-count">Mandarina</span></li>
+                    </ul>
+    				<img src="img/alborea.jpg" style="max-width:100%; border-bottom-left-radius:12px; border-bottom-right-radius:12px;border-top-left-radius:12px; border-top-right-radius:12px;"/>
+    			</div>
+                <div>
+                    <p>
+                    	Híbrido triploide obtenido por polinización en 1994 entre el mandarino Fortune y el mandarino Wilking. El árbol vigoroso, de crecimiento abierto, forma elipsoidal y espinas en el 50% de los nudos de las últimas brotaciones con una longitud media alrededor de 8 mm. <br><br>Todos los ensayos realizados tanto en parcelas con un elevado nivel de inóculo como en inoculaciones de hojas in vitro y plantas in vivo indican que es una variedad resistente a Alternaria.
+                        <br>
+                        <br>
+                    	Presenta acanaladuras en la zona peduncular. Su sabor recuerda al del mandarino común. Resistencia a Alternaria y algo sensible al bufado, en producción tiene ligera tendencia a la vecería.
+                    </p>
+                </div>
+                <div style="background-color:#EDE8DF; border-top-left-radius:12px; border-top-right-radius:12px;">
+                    <ul data-inset="true" data-role="listview">
+                        <li data-role="list-divider">Fecha de recogida</li>
+                    </ul>
+                        
+                    <div id="dateRulersExample1">
+                        <script>
+                            var months = ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"];
+                            $("#dateRulersExample1").dateRangeSlider({
+                                enabled: false,
+                                arrows:false,
+                                bounds: {min: new Date(2015, 10, 1), max: new Date(2016, 1, 28)},
+                                defaultValues: {min: new Date(2015, 11, 5), max: new Date(2016, 0, 31)},
+                                scales: [{
+                                    first: function(value){ return value; },
+                                    end: function(value) {return value; },
+                                    next: function(value){
+                                        var next = new Date(value);
+                                        return new Date(next.setMonth(value.getMonth() + 1));
+                                    },
+                                    label: function(value){
+                                        return months[value.getMonth()];
+                                    },
+                                    format: function(tickContainer, tickStart, tickEnd){
+                                        tickContainer.addClass("myCustomClass");
+                                    }
+                                }]
+                            });
+                        </script>
+                    </div>
+                </div>
+                <ul data-inset="true" data-role="listview">
+                	<li data-role="list-divider">Caracteristicas del fruto</li>
+                    <li>
+                    	<h2>Peso</h2>
+                        <p class="ui-li-aside" style="padding-top:6px">80gr. / 90gr.</p>
+                    </li>
+                    <li>
+                    	<h2>Diametro</h2>
+                        <p class="ui-li-aside" style="padding-top:6px">55mm. / 60mm.</p>
+                    </li>
+                    <li>
+                    	<h2>Corteza</h2>
+                        <p class="ui-li-aside" style="padding-top:6px">2,0mm. / 2,5mm.</p>
+                    </li>
+                    <li>
+                    	<h2>Zumo</h2>
+                        <p class="ui-li-aside" style="padding-top:6px">40% / 50%</p>
+                    </li>
+                    <li>
+                    	<h2>Semillas</h2>
+                        <p class="ui-li-aside" style="padding-top:6px">No</p>
+                    </li>
+                </ul>
+                <div align="center">
+                	<img src="img/alboreaChart.png" style="max-width:100%; border-bottom-left-radius:12px; border-bottom-right-radius:12px;border-top-left-radius:12px; border-top-right-radius:12px;"/>
+                </div>
+    		</div>
+    	</div>
+
+  		<div data-role="page" id="ellendale" data-theme="b" data-fullscreen="false">
+    		<div data-role="content">
+    			<div align="center">
+    				<ul data-inset="true" data-role="listview" data-theme="m" data-dividertheme="m">
+                    	<li data-role="list-divider">Ellendale<span class="ui-li-count">Mandarina</span></li>
+                    </ul>
+    				<img src="img/ellendale.jpg" style="max-width:100%; border-bottom-left-radius:12px; border-bottom-right-radius:12px;border-top-left-radius:12px; border-top-right-radius:12px;"/>
+    			</div>
+                <div>
+                    <p>
+                    	Híbrido originado en Australia de parentales desconocidos. El árbol es vigoroso, con pocas espinas y la madera frágil. La viabilidad del polen es muy alta.
+                        <br>
+                        <br>
+                    	La fructificacion se puede aumentar con el anillado. La respuesta a los tratamientos fitoreguladores para el cuajado es irregular. Sensible al rajado del fruto. Variedad con tendencia a la defoliación.
+        			</p>
+                </div>
+                <div style="background-color:#EDE8DF; border-top-left-radius:12px; border-top-right-radius:12px;">
+                    <ul data-inset="true" data-role="listview">
+                        <li data-role="list-divider">Fecha de recogida</li>
+                    </ul>
+                        
+                    <div id="dateRulersExample1">
+                        <script>
+                            var months = ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"];
+                            $("#dateRulersExample1").dateRangeSlider({
+                                enabled: false,
+                                arrows:false,
+                                bounds: {min: new Date(2016, 0, 1), max: new Date(2016, 3, 30)},
+                                defaultValues: {min: new Date(2016, 0, 20), max: new Date(2016, 2, 30)},
+                                scales: [{
+                                    first: function(value){ return value; },
+                                    end: function(value) {return value; },
+                                    next: function(value){
+                                        var next = new Date(value);
+                                        return new Date(next.setMonth(value.getMonth() + 1));
+                                    },
+                                    label: function(value){
+                                        return months[value.getMonth()];
+                                    },
+                                    format: function(tickContainer, tickStart, tickEnd){
+                                        tickContainer.addClass("myCustomClass");
+                                    }
+                                }]
+                            });
+                        </script>
+                    </div>
+                </div>
+                <ul data-inset="true" data-role="listview">
+                	<li data-role="list-divider">Caracteristicas del fruto</li>
+                    <li>
+                    	<h2>Peso</h2>
+                        <p class="ui-li-aside" style="padding-top:6px">100gr. / 120gr.</p>
+                    </li>
+                    <li>
+                    	<h2>Diametro</h2>
+                        <p class="ui-li-aside" style="padding-top:6px">55mm. / 63mm.</p>
+                    </li>
+                    <li>
+                    	<h2>Corteza</h2>
+                        <p class="ui-li-aside" style="padding-top:6px">1,5mm. / 2,2mm.</p>
+                    </li>
+                    <li>
+                    	<h2>Zumo</h2>
+                        <p class="ui-li-aside" style="padding-top:6px">52% / 55%</p>
+                    </li>
+                    <li>
+                    	<h2>Semillas</h2>
+                        <p class="ui-li-aside" style="padding-top:6px">Si</p>
+                    </li>
+                </ul>
+                <div align="center">
+                	<img src="img/ellendaleChart.png" style="max-width:100%; border-bottom-left-radius:12px; border-bottom-right-radius:12px;border-top-left-radius:12px; border-top-right-radius:12px;"/>
+                </div>
+    		</div>
+    	</div>
+
+  		<div data-role="page" id="fortune" data-theme="b" data-fullscreen="false">
+    		<div data-role="content">
+    			<div align="center">
+    				<ul data-inset="true" data-role="listview" data-theme="m" data-dividertheme="m">
+                    	<li data-role="list-divider">Fortune<span class="ui-li-count">Mandarina</span></li>
+                    </ul>
+    				<img src="img/fortune.jpg" style="max-width:100%; border-bottom-left-radius:12px; border-bottom-right-radius:12px;border-top-left-radius:12px; border-top-right-radius:12px;"/>
+    			</div>
+                <div>
+                    <p>
+                    	Híbrido de clementina Fina x mandarina Dancy obtenido en California. El árbol es vigoroso, con espinas en las ramas vigorosas. La viabilidad del polen es muy alta.
+                        <br>
+                        <br>
+                    	Muy sensible a alternaria. El fruto es sensible al rajado. La corteza presenta “pitting” con temperaturas bajas. La acidez se mantiene alta al final del periodo de recolección.
+        			</p>
+                </div>
+                <div style="background-color:#EDE8DF; border-top-left-radius:12px; border-top-right-radius:12px;">
+                    <ul data-inset="true" data-role="listview">
+                        <li data-role="list-divider">Fecha de recogida</li>
+                    </ul>
+                        
+                    <div id="dateRulersExample1">
+                        <script>
+                            var months = ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"];
+                            $("#dateRulersExample1").dateRangeSlider({
+                                enabled: false,
+                                arrows:false,
+                                bounds: {min: new Date(2015, 1, 1), max: new Date(2015, 4, 31)},
+                                defaultValues: {min: new Date(2015, 2, 1), max: new Date(2015, 3, 30)},
+                                scales: [{
+                                    first: function(value){ return value; },
+                                    end: function(value) {return value; },
+                                    next: function(value){
+                                        var next = new Date(value);
+                                        return new Date(next.setMonth(value.getMonth() + 1));
+                                    },
+                                    label: function(value){
+                                        return months[value.getMonth()];
+                                    },
+                                    format: function(tickContainer, tickStart, tickEnd){
+                                        tickContainer.addClass("myCustomClass");
+                                    }
+                                }]
+                            });
+                        </script>
+                    </div>
+                </div>
+                <ul data-inset="true" data-role="listview">
+                	<li data-role="list-divider">Caracteristicas del fruto</li>
+                    <li>
+                    	<h2>Peso</h2>
+                        <p class="ui-li-aside" style="padding-top:6px">90gr. / 110gr.</p>
+                    </li>
+                    <li>
+                    	<h2>Diametro</h2>
+                        <p class="ui-li-aside" style="padding-top:6px">65mm. / 65mm.</p>
+                    </li>
+                    <li>
+                    	<h2>Corteza</h2>
+                        <p class="ui-li-aside" style="padding-top:6px">2,5mm. / 3,2mm.</p>
+                    </li>
+                    <li>
+                    	<h2>Zumo</h2>
+                        <p class="ui-li-aside" style="padding-top:6px">52% / 55%</p>
+                    </li>
+                    <li>
+                    	<h2>Semillas</h2>
+                        <p class="ui-li-aside" style="padding-top:6px">Puede presentarlas</p>
+                    </li>
+                </ul>
+                <div align="center">
+                	<img src="img/fortuneChart.png" style="max-width:100%; border-bottom-left-radius:12px; border-bottom-right-radius:12px;border-top-left-radius:12px; border-top-right-radius:12px;"/>
+                </div>
+    		</div>
+    	</div>
 
 	</body>
 </html>
