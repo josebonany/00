@@ -4,7 +4,7 @@
 					e.preventDefault();
 					navigator.app.exitApp();
 				}
-				else if ($.mobile.activePage.attr('id') == 'calculadora' || 'naranjas'){
+				else if ($.mobile.activePage.attr('id') == 'calculadora' || 'naranjas' || 'albir'){
 					$.mobile.changePage('#home');
 			   }
 				else {
