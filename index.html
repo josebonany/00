@@ -1,0 +1,217 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Citromer Ett</title>
+	    <meta name="viewport" content="width=device-width, initial-scale=0, maximum-scale=1.0, user-scalable=no"/>
+        <link type="text/css" rel="stylesheet" href="lib/iThing.css"/>
+        <link type="text/css" rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css"/>
+        <link type="text/css" rel="stylesheet" href="css/jquery.mobile.inline-png-1.4.5.min.css"/>
+        <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+		<script type="text/javascript" src="js/trans.js"></script>
+		<script type="text/javascript" src="js/cordovaandroid.js"></script>
+        <script type="text/javascript" src="lib/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="lib/jQAllRangeSliders-withRuler-min.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
+		<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+    </head> 
+    <body> 
+
+        <div data-role="page" id="home" data-theme="b" data-fullscreen="false">
+        	<!--<div data-role="header" data-position="fixed" data-id="cabecera" data-tap-toggle="false" align="center">
+                <img src="img/logo.png" style="max-height:65px"/>
+            </div>-->
+            <div data-role="content">
+                <div align="center">
+                    <img src="img/logo.png" style="max-width:100%"/>
+                    <br>
+                    <br>
+                	<img src="img/portada.png" style="max-width:100%; border-bottom-left-radius:12px; border-bottom-right-radius:12px;border-top-left-radius:12px; border-top-right-radius:12px;"/>
+                </div>
+                <ul id="tel" data-inset="true" data-role="listview">
+                    <li>
+                        <a data-role="button" href="tel:+34 960919907">
+                        <!--<a data-role="button" data-transition="slideup" onclick="doOpen('geo:39.4687241,-0.4188346', 'random_string', '', 2);">-->
+                            <img class="ui-li-icon" src="css/images/icons-png/phone-white.png"/>Llamanos
+                        </a>
+                    </li>
+                </ul>
+                <ul id="geo" data-inset="true" data-role="listview">
+                    <li>
+                        <a data-role="button" href="geo:39.4687241,-0.4188346">
+                            <img class="ui-li-icon" src="css/images/icons-png/location-white.png"/>Como llegar
+                        </a>
+                    </li>
+                </ul>
+                <ul id="email" data-inset="true" data-role="listview">
+                    <li>
+                        <a data-role="button" href="mailto:administracion@citromerett.es?subject=Email%20desde%20la%20app&body=Estoy%20inetersado%20en%20recibir%20informacion%20sobre%20">
+                            <img class="ui-li-icon" src="css/images/icons-png/mail-white.png"/>Correo electronico
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div data-role="footer" data-position="fixed" data-id="menu" data-tap-toggle="false">
+				<div data-role="navbar">
+                	<ul>
+                      	<li><a onclick="doOpen('calculadorasolar/index.html', 'random_string', 'location=no');" data-icon="gear" data-transition="none">SolCalc</a></li>
+                        <li><a href="#calculadora" data-icon="grid" data-transition="none">CitroCalc</a></li>
+                        <!--<li><a href="#clima1" data-icon="clima" data-theme="m" data-transition="none">Clima</a></li>-->
+                        <li><a href="#naranjas" data-icon="bullets" data-transition="none">Variedades</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+		<div data-role="page" id="calculadora" data-theme="b" data-fullscreen="false">
+        	<div data-role="header" data-position="fixed" data-id="cabecera" data-tap-toggle="false" align="center">
+                <img src="img/logo.png" style="max-height:65px"/>
+            </div>
+            <div data-role="content">
+                <div align="center">
+                  <h3>Naranja Grande</h3>
+                </div>
+                <div data-role="fieldcontain">  
+                  <label for="valorg">€/Caja</label>
+                  <input type="range" min="0" max="2" step="0.05" value="0.7" id="valorg" name="valorg" data-tap-toggle="false" onChange="calcularg()">
+                  <label for="operariosg">Operarios</label>
+                  <input type="range" min="1" max="25" value="1" id="operariosg" name="operariosg" data-tap-toggle="false" onChange="calcularg()">
+                  <label for="cajasg">Cajas</label>
+                  <input type="number" id="cajasg" name="cajasg" onKeyUp="calcularg()">                  
+                  <label for="totalg">Total €/Operario</label>
+                  <input type="text" id="totalg" name="totalg" data-tap-toggle="false" readonly>
+                </div>
+               <div align="center">  
+                  <h3>Naranja Pequeña</h3>
+               </div> 
+               <div data-role="fieldcontain">   
+                  <label for="valorp">€/Caja</label>
+                  <input type="range" min="0" max="3" step="0.05" value="1.3" id="valorp" name="valorp" data-tap-toggle="false" onChange="calcularp()">
+                  <label for="operariosp">Operarios</label>
+                  <input type="range" min="1" max="25" value="1" id="operariosp" name="operariosp" data-tap-toggle="false" onChange="calcularp()">
+                  <label for="cajasp">Cajas</label>
+                  <input type="number" id="cajasp" name="cajasp" onKeyUp="calcularp()">                  
+                  <label for="totalp">Total €/Operario</label>
+                  <input type="text" id="totalp" name="totalp" data-tap-toggle="false" readonly>
+                </div>
+              <br>
+              <div data-role="fieldcontain">
+                  <div class="ui-grid-b" align="center">
+                    <div class="ui-block-a">Naranja Pequeña</div>
+                    <div class="ui-block-b">Naranja Grande</div>
+                    <div class="ui-block-c"><input type="button" class="ui-btn-block" value="Total" id="total" name="total" onClick="calculartodo()" data-tap-toggle="false"></div>
+                    <div class="ui-block-a">
+                        <input type="number" id="totalp1" name="totalp1" data-inline="true" data-tap-toggle="false" readonly>
+                    </div>
+                    <div class="ui-block-b">
+                        <input type="number" id="totalg2" name="totalg2" data-inline="true" data-tap-toggle="false" readonly>
+                    </div>
+                    <div class="ui-block-c">
+                        <input type="number" id="totalpg" name="totalpg" data-inline="true" data-tap-toggle="false" readonly>
+                    </div>
+                  </div>
+              </div>
+              <!--<input type="file" accept="image/*" capture="camera">-->
+            </div>
+        </div>
+        
+        <div data-role="page" id="naranjas" data-theme="b" data-fullscreen="false">
+        	<div data-role="header" data-id="cabecera" data-position="fixed" data-tap-toggle="false" align="center">
+                <img src="img/logo.png" style="max-height:65px"/>
+            </div>
+		  	<div data-role="content">
+                <h2>Satsuma</h2>
+                <ul id="satsuma" data-inset="true" data-role="listview">
+                   <li><a href="clausellina.html">Clausellina</a></li>
+                   <li><a href="iwasaki.html">Iwasaki</a></li>
+                   <li><a href="okitsu.html">Okitsu</a></li>
+                   <li><a href="owari.html">Owari</a></li>
+                   <li><a href="serafines.html">Serafines</a></li>
+                </ul>
+                
+                <h2>Clementina</h2>
+                <ul id="clementina" data-inset="true" data-role="listview">
+                   <li><a href="arrufatina.html">Arrufatina</a></li>
+                   <li><a href="basol.html">Basol</a></li>
+                   <li><a href="beatriz.html">Beatriz de Anna</a></li>
+                   <li><a href="capola.html">Capola</a></li>
+                   <li><a href="clemenclara.html">Clemenclara</a></li>
+                   <li><a href="clemenlate.html">Clemenlate</a></li>
+                   <li><a href="clemenpons.html">Clemenpons</a></li>
+                   <li><a href="clemenrubi.html">Clemenrubi</a></li>
+                   <li><a href="clemensoon.html">Clemensoon</a></li>
+                   <li><a href="clementina-fina.html">Clementina fina</a></li>
+                   <li><a href="clemenules.html">Clemenules</a></li>
+                   <li><a href="clemenval.html">Clemenval</a></li>
+                   <li><a href="clemenverd.html">Clemenverd</a></li>
+                   <li><a href="cultifort.html">Cultifort</a></li>
+                   <li><a href="esbal.html">Esbal</a></li>
+                   <li><a href="hernandina.html">Hernandina</a></li>
+                   <li><a href="loretina.html">Loretina</a></li>
+                   <li><a href="marisol.html">Marisol</a></li>
+                   <li><a href="nero.html">Nero</a></li>
+                   <li><a href="neufina.html">Neufina</a></li>
+                   <li><a href="nulessin.html">Nulessin</a></li>
+                   <li><a href="oct-488.html">Oct 488</a></li>
+                   <li><a href="orogrande.html">Orogrande</a></li>
+                   <li><a href="orogros.html">Orogros</a></li>
+                   <li><a href="oronules.html">Oronules</a></li>
+                   <li><a href="oroval.html">Oroval</a></li>
+                   <li><a href="sando.html">Sando</a></li>
+                </ul>
+                
+                <h2>Mandarina</h2>
+                <ul id="mandarina" data-inset="true" data-role="listview">
+                   <li><a href="albir.html">Albir</a></li>
+                   <li><a href="alborea.html">Alborea</a></li>
+                   <li><a href="ellendale.html">Ellendale</a></li>
+                   <li><a href="fortune.html">Fortune</a></li>
+                   <li><a href="garbi.html">Garbi</a></li>
+                   <li><a href="goldnugget.html">Gold Nugget</a></li>
+                   <li><a href="kara.html">Kara</a></li>
+                   <li><a href="mandanovasl.html">Mandanova SL</a></li>
+                   <li><a href="milana.html">Milana</a></li>
+                   <li><a href="moncada.html">Moncada</a></li>
+                   <li><a href="moncalina.html">Moncalina</a></li>
+                   <li><a href="murcott.html">Murcott</a></li>
+                   <li><a href="murina.html">Murina</a></li>
+                   <li><a href="nadorcott.html">Nadorcott</a></li>
+                   <li><a href="novaclemenvilla.html">Nova o Clemenvilla</a></li>
+                   <li><a href="orri.html">Orri</a></li>
+                   <li><a href="ortanique.html">Ortanique</a></li>
+                   <li><a href="primosole.html">Primosole</a></li>
+                   <li><a href="queen.html">Queen</a></li>
+                   <li><a href="safor.html">Safor</a></li>
+                   <li><a href="tanggold.html">Tang Gold</a></li>
+                   <li><a href="tde2.html">TDE2 (Shasta Gold)</a></li>
+                   <li><a href="tde4.html">TDE4 (Yosemite Gold)</a></li>
+                </ul>
+                
+                <h2>Naranja</h2>
+                <ul id="naranja" data-inset="true" data-role="listview">
+                   <li><a href="barberina.html">Barberina</a></li>
+                   <li><a href="barnfield.html">Barnfield Late Navel</a></li>
+                   <li><a href="caracara.html">Caracara</a></li>
+                   <li><a href="chislett.html">Chislett Summer Navel</a></li>
+                   <li><a href="fukumoto.html">Fukumoto</a></li>
+                   <li><a href="lanelate.html">Lane Late</a></li>
+                   <li><a href="m7.html">M-7</a></li>
+                   <li><a href="navelate.html">Navelate</a></li>
+                   <li><a href="navelina.html">Navelina</a></li>
+                   <li><a href="newhall.html">Newhall</a></li>
+                   <li><a href="powell.html">Powell Summer Navel</a></li>
+                   <li><a href="rohde.html">Rohde Summer Navel</a></li>
+                   <li><a href="salustiana.html">Salustiana</a></li>
+                   <li><a href="sanguinelli.html">Sanguinelli</a></li>
+                   <li><a href="taroccorosso.html">Tarocco Rosso</a></li>
+                   <li><a href="valenciadelta.html">Valencia Delta Seedless</a></li>
+                   <li><a href="valencialate.html">Valencia Late</a></li>
+                   <li><a href="valenciamidknight.html">Valencia Midknight Seedless</a></li>
+                   <li><a href="washington.html">Washington</a></li>
+                </ul>
+                
+          	</div>
+       </div>
+
+	</body>
+</html>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+	<widget xmlns = "http://www.w3.org/ns/widgets"
+		xmlns:gap = "http://phonegap.com/ns/1.0"
+		id        = "com.citromerett.app"
+        version   = "1.0.0">
+		
+		<preference name="android-installLocation" value="preferExternal" /><!--android value="auto-preferExternal"-->
+		<preference name="fullscreen" value="false" />
+		<preference name="target-device" value="universal" />
+		<preference name="orientation" value="default" />
+		<preference name="phonegap-version" value="3.4.0" />
+		<preference name="LoadingPageDialog" value="Porfavor espere, se estan cargando los datos..."/>
+		<preference name="LoadingDialog" value="Cargando..."/>
+		<preference name="EnableViewportScale" value="false" />
+
+
+
+		<name>Citromer ett</name>
+		<description>Aplicacion donde encontraras información de los jornales en la recogida de naranja desde tu movil.</description>
+		<author email="josebonany@gmail.com">Josep Bonany</author>
+		
+		<access origin="*"/>
+		
+		
+		<gap:platforms>
+			<gap:platform name="android" minVersion="2.1" />
+		</gap:platforms>
+		
+		<icon src="img/icono.png" />
+		
+		<gap:splash src="res/screen/android/screen-ldpi-portrait.jpg"  gap:platform="android" gap:density="ldpi" />
+		<gap:splash src="res/screen/android/screen-mdpi-portrait.jpg"  gap:platform="android" gap:density="mdpi" />
+		<gap:splash src="res/screen/android/screen-hdpi-portrait.jpg"  gap:platform="android" gap:density="hdpi" />
+		<gap:splash src="res/screen/android/screen-xhdpi-portrait.jpg" gap:platform="android" gap:density="xhdpi" />
+		
+		<gap:plugin name="nl.x-services.plugins.socialsharing" />
+		<gap:plugin name="org.apache.cordova.inappbrowser" version="0.5.2" />
+		
+		<feature name="Camera">
+		<param name="android-package" value="org.apache.cordova.CameraLauncher" />
+		</feature>
+		
+		<feature name="Capture">
+		<param name="android-package" value="org.apache.cordova.Capture" />
+		</feature>
+		
+		<feature name="NetworkStatus">
+		<param name="android-package" value="org.apache.cordova.NetworkManager" />
+		</feature>
+		
+		<feature name="Contacts">
+		<param name="android-package" value="org.apache.cordova.ContactManager" />
+		</feature>
+		
+		<feature name="Device">
+		<param name="android-package" value="org.apache.cordova.Device" />
+		</feature>
+		
+		<feature name="File">
+		<param name="android-package" value="org.apache.cordova.FileUtils" />
+		</feature>
+		
+		<feature name="FileTransfer">
+		<param name="android-package" value="org.apache.cordova.FileTransfer" />
+		</feature>
+		
+		<feature name="Geolocation">
+		<param name="android-package" value="org.apache.cordova.GeoBroker" />
+		</feature>
+		
+		<feature name="Globalization">
+		<param name="android-package" value="org.apache.cordova.Globalization" />
+		</feature>
+		
+		<feature name="InAppBrowser">
+		<param name="android-package" value="org.apache.cordova.InAppBrowser" />
+		</feature>
+		
+		<feature name="Media">
+		<param name="android-package" value="org.apache.cordova.AudioHandler" />
+		</feature>
+		
+		<feature name="Notification">
+		<param name="android-package" value="org.apache.cordova.Notification" />
+		</feature>
+		
+		<feature name="SplashScreen">
+		<param name="android-package" value="org.apache.cordova.SplashScreen" />
+		</feature>
+		
+		<feature name="SocialSharing">
+  		<param name="android-package" value="nl.xservices.plugins.SocialSharing" />
+		</feature>
+
+	</widget>
+	

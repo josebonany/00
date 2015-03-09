@@ -1,0 +1,87 @@
+<!DOCTYPE html>  
+<html lang="es">  
+	<head>  
+		<meta charset="utf-8">  
+        <title>Sanguinelli</title>  
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimun-scale=1 maximum-scale=1, user-scalable=no"/>
+	</head>  
+	
+    <body>
+  		<div data-role="page" id="sanguinelli" data-theme="b" data-fullscreen="false">
+    		<div data-role="content">
+    			<div align="center">
+    				<ul data-inset="true" data-role="listview" data-theme="m" data-dividertheme="m">
+                    	<li data-role="list-divider">Sanguinelli<span class="ui-li-count">Naranja</span></li>
+                    </ul>
+    				<img src="img/sanguinelli.jpg" style="max-width:100%; border-bottom-left-radius:12px; border-bottom-right-radius:12px;border-top-left-radius:12px; border-top-right-radius:12px;"/>
+    			</div>
+                <div>
+                    <p>
+                    	Mutación de Doble Fina originada en Almenara (Castellón). Árbol de vigor medio, achaparrado, de follaje denso y sin espinas. La viabilidad del polen está entorno al 25%, siendo la variedad autocompatible. La coloración del fruto es más acusada en años de verano calido, seguido de invierno frío, siendo mayor con suelos sueltos.
+                        <br>
+                        <br>
+                   	    El fruto tiene poca adherencia al pedúnculo cuando madura, precisando de tratamiento si se desea mantener la fruta hasta finales de marzo. Con manchas rojizas en el 50% o mas de su superficie. La coloración rojiza se distribuye a lo largo de los tabiques radiales y en la zona periférica de los gajos. Zumo muy aromático, de color rojo oscuro y contenido muy bajo de limonina.
+        			</p>
+                </div>
+                <div style="background-color:#EDE8DF; border-top-left-radius:12px; border-top-right-radius:12px;">
+                    <ul data-inset="true" data-role="listview">
+                        <li data-role="list-divider">Fecha de recogida</li>
+                    </ul>
+                        
+                    <div id="dateRulersExample1">
+                        <script>
+                            var months = ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"];
+                            $("#dateRulersExample1").dateRangeSlider({
+                                enabled: false,
+                                arrows:false,
+                                bounds: {min: new Date(2015, 0, 1), max: new Date(2015, 3, 30)},
+                                defaultValues: {min: new Date(2015, 0, 15), max: new Date(2015, 2, 31)},
+                                scales: [{
+                                    first: function(value){ return value; },
+                                    end: function(value) {return value; },
+                                    next: function(value){
+                                        var next = new Date(value);
+                                        return new Date(next.setMonth(value.getMonth() + 1));
+                                    },
+                                    label: function(value){
+                                        return months[value.getMonth()];
+                                    },
+                                    format: function(tickContainer, tickStart, tickEnd){
+                                        tickContainer.addClass("myCustomClass");
+                                    }
+                                }]
+                            });
+                        </script>
+                    </div>
+                </div>
+                <ul data-inset="true" data-role="listview">
+                	<li data-role="list-divider">Caracteristicas del fruto</li>
+                    <li>
+                    	<h2>Peso</h2>
+                        <p class="ui-li-aside" style="padding-top:6px">100gr. / 130gr.</p>
+                    </li>
+                    <li>
+                    	<h2>Diametro</h2>
+                        <p class="ui-li-aside" style="padding-top:6px">56mm. / 62mm.</p>
+                    </li>
+                    <li>
+                    	<h2>Corteza</h2>
+                        <p class="ui-li-aside" style="padding-top:6px">3,6mm. / 4,7mm.</p>
+                    </li>
+                    <li>
+                    	<h2>Zumo</h2>
+                        <p>Excelente</p>
+                        <p class="ui-li-aside" style="padding-top:6px">43% / 47%</p>
+                    </li>
+                    <li>
+                    	<h2>Semillas</h2>
+                        <p class="ui-li-aside" style="padding-top:6px">Si</p>
+                    </li>
+                </ul>
+                <div align="center">
+                	<img src="img/sanguinelliChart.png" style="max-width:100%; border-bottom-left-radius:12px; border-bottom-right-radius:12px;border-top-left-radius:12px; border-top-right-radius:12px;"/>
+                </div>
+    		</div>
+    	</div>
+	</body>  
+</html>  

@@ -1,0 +1,86 @@
+<!DOCTYPE html>  
+<html lang="es">  
+	<head>  
+		<meta charset="utf-8">  
+        <title>Variedades</title>  
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimun-scale=1 maximum-scale=1, user-scalable=no"/>
+	</head>  
+	
+    <body>
+  		<div data-role="page" id="loretina" data-theme="b" data-fullscreen="false">
+    		<div data-role="content">
+    			<div align="center">
+    				<ul data-inset="true" data-role="listview" data-theme="m" data-dividertheme="m">
+                    	<li data-role="list-divider">Loretina<span class="ui-li-count">Clementina</span></li>
+                    </ul>
+    				<img src="img/loretina.jpg" style="max-width:100%; border-bottom-left-radius:12px; border-bottom-right-radius:12px;border-top-left-radius:12px; border-top-right-radius:12px;"/>
+    			</div>
+                <div>
+                    <p>
+                    	Mutación de Marisol, originada en Tormos (Alicante). Árbol vigoroso, con alguna espina y madera frágil. Presenta abundantes agallas multiyemas.
+                        <br>
+                        <br>
+                    	Puede ser necesario el aclareo de frutos. Es sensible al ”pixat”. Deberá injertarse sobre patrones muy vigorosos. Al reinjertar sobre esta variedad, el desarrollo de la nueva variedad puede ser escaso.
+        			</p>
+                </div>
+                <div style="background-color:#EDE8DF; border-top-left-radius:12px; border-top-right-radius:12px;">
+                    <ul data-inset="true" data-role="listview">
+                        <li data-role="list-divider">Fecha de recogida</li>
+                    </ul>
+                        
+                    <div id="dateRulersExample1">
+                        <script>
+                            var months = ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"];
+                            $("#dateRulersExample1").dateRangeSlider({
+                                enabled: false,
+                                arrows:false,
+                                bounds: {min: new Date(2015, 8, 1), max: new Date(2015, 11, 31)},
+                                defaultValues: {min: new Date(2015, 8, 25), max: new Date(2015, 10, 10)},
+                                scales: [{
+                                    first: function(value){ return value; },
+                                    end: function(value) {return value; },
+                                    next: function(value){
+                                        var next = new Date(value);
+                                        return new Date(next.setMonth(value.getMonth() + 1));
+                                    },
+                                    label: function(value){
+                                        return months[value.getMonth()];
+                                    },
+                                    format: function(tickContainer, tickStart, tickEnd){
+                                        tickContainer.addClass("myCustomClass");
+                                    }
+                                }]
+                            });
+                        </script>
+                    </div>
+                </div>
+                <ul data-inset="true" data-role="listview">
+                	<li data-role="list-divider">Caracteristicas del fruto</li>
+                    <li>
+                    	<h2>Peso</h2>
+                        <p class="ui-li-aside" style="padding-top:6px">85gr. / 90gr.</p>
+                    </li>
+                    <li>
+                    	<h2>Diametro</h2>
+                        <p class="ui-li-aside" style="padding-top:6px">52mm. / 58mm.</p>
+                    </li>
+                    <li>
+                    	<h2>Corteza</h2>
+                        <p class="ui-li-aside" style="padding-top:6px">1,8mm. / 2,5mm.</p>
+                    </li>
+                    <li>
+                    	<h2>Zumo</h2>
+                        <p class="ui-li-aside" style="padding-top:6px">53% / 58%</p>
+                    </li>
+                    <li>
+                    	<h2>Semillas</h2>
+                        <p class="ui-li-aside" style="padding-top:6px">Puede presentarlas</p>
+                    </li>
+                </ul>
+                <div align="center">
+                	<img src="img/loretinaChart.png" style="max-width:100%; border-bottom-left-radius:12px; border-bottom-right-radius:12px;border-top-left-radius:12px; border-top-right-radius:12px;"/>
+                </div>
+    		</div>
+    	</div>
+	</body>  
+</html>  
