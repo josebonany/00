@@ -4,9 +4,6 @@
 					e.preventDefault();
 					navigator.app.exitApp();
 				}
-				else if ($.mobile.activePage.attr('id') == 'calculadora' || 'naranjas'){
-					$.mobile.changePage('#home');
-			   }
 				else if ($.mobile.activePage.attr('id') == 'albir' || 'alborea' || 
 						'arrufatina' || 'barberina' || 'barnfield' || 'basol' || 'beatriz' || 
 						'capola' || 'caracara' || 'chislett' || 'clausellina' || 'clemenclara' || 
@@ -22,6 +19,9 @@
 						'taroccorosso' || 'tde2' || 'tde4' || 'valenciadelta' || 'valencialate' || 'valenciamidknight' || 'washington'){
 					$.mobile.changePage('#naranjas');
 			   }
+				else if ($.mobile.activePage.attr('id') == 'calculadora' || 'naranjas'){
+					$.mobile.changePage('#home');
+			    }
 				else {
 					navigator.app.backHistory();
 				}
