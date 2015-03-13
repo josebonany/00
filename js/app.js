@@ -4,8 +4,23 @@
 					e.preventDefault();
 					navigator.app.exitApp();
 				}
-				else if ($.mobile.activePage.attr('id') == 'calculadora' || 'naranjas' || 'albir' || 'alborea' || 'ellendale' || 'fortune'){
+				else if ($.mobile.activePage.attr('id') == 'calculadora' || 'naranjas'){
 					$.mobile.changePage('#home');
+			   }
+				else if ($.mobile.activePage.attr('id') == 'albir' || 'alborea' || 
+						'arrufatina' || 'barberina' || 'barnfield' || 'basol' || 'beatriz' || 
+						'capola' || 'caracara' || 'chislett' || 'clausellina' || 'clemenclara' || 
+						'clemenlate' || 'clemenpons' || 'clemenrubi' || 'clemensoon' || 'clementina-fina' || 
+						'clemenules' || 'clemenval' || 'clemenverd' || 'cultifort' || 'ellendale' || 'esbal' || 
+						'fortune' || 'fukumoto' || 'garbi' || 'goldnugget' || 'hernandina' || 'iwasaki' || 
+						'kara' || 'lanelate' || 'loretina' || 'm7' || 'mandanovasl' || 'marisol' || 
+						'milana' || 'moncada' || 'moncalina' || 'murcott' || 'murina' || 'nadorcott' || 
+						'navelate' || 'navelina' || 'nero' || 'neufina' || 'newhall' || 'novaclemenvilla' || 
+						'nulessin' || 'oct-488' || 'okitsu' || 'orogrande' || 'orogros' || 'oronules' || 'oroval' || 
+						'orri' || 'ortanique' || 'owari' || 'powell' || 'primosole' || 'queen' || 'rohde' || 
+						'safor' || 'salustiana' || 'sando' || 'sanguinelli' || 'serafines' || 'tanggold' || 
+						'taroccorosso' || 'tde2' || 'tde4' || 'valenciadelta' || 'valencialate' || 'valenciamidknight' || 'washington'){
+					$.mobile.changePage('#naranjas');
 			   }
 				else {
 					navigator.app.backHistory();
